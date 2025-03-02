@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main>
+        <section class="section section-form">
+            <div class="container">
+                <h1 class="title">Тестовое задание по созданию формы</h1>
+                <p class="section-form__desc">При реализации задачи преимущественно был использован JS без jQuery ( при
+                    необходимости возможно всё
+                    сделать и с использованием него + маску телефона можно было бы реализовать через jquery.maskedinput, например)
+                </p>
+                <div class="form-wrap">
+                    <form class="form" id="feedback-form" name="feedback-form" action="/" method="POST">
+                        <div class="subtitle">Личная информация</div>
+                        <label class="input-item">
+                            <span class="input-item__label">Имя</span>
+                            <input type="text" class="input-item__input" name="name" value=""
+                                placeholder="Иванов Иван Иванович" required>
+                        </label>
+                        <label class="input-item" data-error="Введите почту в правильном формате">
+                            <span class="input-item__label">Email</span>
+                            <input type="email" class="input-item__input" name="email" value=""
+                                placeholder="email@example.com" required>
+                        </label>
+                        <label class="input-item">
+                            <span class="input-item__label">Телефон</span>
+                            <input type="tel" class="input-item__input" name="phone" value=""
+                                placeholder="+7 (999)-999-99-99" required>
+                        </label>
+                        <div class="subtitle">Информация о бизнесе</div>
+                        <label class="input-item">
+                            <span class="input-item__label">Ожидаемый оборот</span>
+                            <input type="number" class="input-item__input" name="turnover" value="" step="0.01"
+                                required>
+                        </label>
+                        <div class="select-wrap">
+                            <input type="hidden" name="" id="select-industry" value="">
+                            <select name="name" class="select">
+                                <option disabled>Выберите индустрию </option>
+                                <option value="1">Индустрия 1</option>
+                                <option value="2">Индустрия 2</option>
+                                <option value="3">Индустрия 3</option>
+                            </select>
+                        </div>
+                        <div class="form__consent">
+                            <label class="input-item checkbox">
+                                <input type="checkbox" name="consent">
+                                <span class="input-item__label">Я принимаю правила сервиса</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="form__btn btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div class="popup" data-popup-id="popup-success">
+            <div class="popup__wrapper">
+                <div class="popup__inner">
+                    <div class="popup__content">
+                        <button class="popup__btn-close popup-close"></button>
+                        <div class="popup__title subtitle">Спасибо! Ваша заявка принята</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

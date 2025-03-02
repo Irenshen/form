@@ -1,0 +1,18 @@
+@mixin text-overflow-line($number-of-lines: 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @if $number-of-lines ==1 {
+        white-space: nowrap;
+    }
+
+    @else {
+        white-space: inherit;
+
+        @supports (-webkit-line-clamp: $number-of-lines) {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: $number-of-lines;
+        }
+    }
+}
